@@ -1,4 +1,4 @@
-# y
+# vue-cli搭建的小型项目
 
 > A Vue.js project
 
