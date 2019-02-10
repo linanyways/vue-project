@@ -10,6 +10,20 @@ export default new Vuex.Store({
       age: '24',
       studentList:[]    
     },
+    getters:{
+      // getters 相当于计算属性
+      newStudentList(state){
+        return state.studentList.map((item,index) =>{ // 不要忘记return，忘记写return 组件拿不到值
+            if(index == 0){
+              return `**${item}`
+            }else if(index < 2){
+              return `${item}##`
+            }else{
+              return `++ ${item} ++`
+            }
+          })
+      }
+    },
     mutations:{
     
     },

@@ -26,13 +26,19 @@ export default {
    created(){
        console.log(this.bus,'bus')
    },
-   computed: {
+//    computed: {
+//        age(){
+//            return this.$store.state.age
+//        },
+//        name(){
+//          return this.$store.state.name
+//        } 
     //    ...mapState({ // mapState 是一个函数，返回值是key 和value
     //        setName: state => state.name,
     //        age: state => state.age
     //    }),
     //    ...mapState(['studentList'])
-   }
+//    }
 }
 </script>
 

@@ -4,7 +4,7 @@
       <slot></slot>
       学员列表：
       <ul>
-          <li v-for="(item,index) in studentList" :key="index+item">{{item}}</li>
+          <li v-for="(item,index) in newStudentList" :key="index+item">{{item}}</li>
       </ul>
   </div>
 </template>
@@ -16,14 +16,18 @@ export default {
 //   props:['student-list'],
   data(){
       return{
-        // studentList:[]
+        // newStudentList:[]
       }
   },
   methods:{
 
   },
   computed:{
-     ...mapState(['studentList'])
+    //  ...mapState(['studentList']),
+     newStudentList(){
+       console.log(this.$store.getters.newStudentList,'ff')
+       return this.$store.getters.newStudentList
+     }
   },
 //   created(){
 //       this.bus.$on('add', name=>{
